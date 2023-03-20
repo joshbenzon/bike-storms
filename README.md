@@ -1,14 +1,16 @@
-#Data Deliverable
+# Data Deliverable
 
-##Three datasets are being used.
+#### Three datasets are being used.
 
 2022 taxi ride data - https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
 2022 bike data - https://s3.amazonaws.com/tripdata/index.html
-2022 weather data - an API call.
 
-##Using these three datasets, we generated some early dataframes but ended up with three intermediate dataframes.
+2022 weather data - an API call to https://archive-api.open-meteo.com
 
-#Weather data
+#### Using these three datasets, we generated some initial dataframes to process the data and ended up with three intermediate dataframes.
+
+##  1. Weather data
 This contained four columns: 
 
 Date (type = string): YYYY-MM-DD
@@ -16,7 +18,7 @@ WeatherCode (type = string): a string representing the most severe weather condi
 Temp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
 Precipitation (type = float): Sum of daily precipitation in mm
 
-#Bike data
+## 2. Bike data
 This contained three columns
 
 Date (type = string): YYYY-MM-DD
@@ -24,16 +26,16 @@ UserAge (type = string): The age of the user
 DurationTrip (type = string): HH-MM-SS (hours, min, sec)
 DistanceTrip (type = float): in latitud
 
-#Taxi data
+## 3. Taxi data
 This contained two columns
 
 Date (type = string): YYYY-MM-DD
 DurationTrip (type = string): HH-MM-SS (hours, min, sec)
 DistanceTrip (type = float): 
 
-##We then combined all of these into one final table by using various joins and count operations.
+#### We then combined all of these into one final table by using various joins and count operations.
 
-#FINAL TABLE
+## FINAL TABLE
 
 This contained 
 
