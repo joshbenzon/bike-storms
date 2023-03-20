@@ -1,5 +1,6 @@
 import pandas as pd
 
+# the original parquet data must be git ignored!!!!
 df_init = pd.read_parquet('taxi_orig/yellow_tripdata_2022-01.parquet')
 # df.to_csv('taxi_orig/taxi.csv')
 
