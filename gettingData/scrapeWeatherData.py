@@ -4,8 +4,8 @@ import pandas
 
 lat = 40.71
 lon = -74.01
-start_date = "2022-01-01"
-end_date = "2022-12-31"
+start_date = "2021-01-01"
+end_date = "2022-11-30"
 
 
 #converts WMO codes to categories. I checked to see which were in the set...
@@ -16,10 +16,10 @@ def weathercodeToString(code):
         return "Snowing"
     elif (code >= 51 and code <=55):
         return "Light Rain"
-    elif (code >= 61 and code <=63):
+    elif (code >= 61 and code <=65):
         return "Heavy Rain"
     else:
-        return "ERROR"
+        return "ERROR" + str(code)
     
 url = f"https://archive-api.open-meteo.com/v1/archive?latitude={lat}&longitude={lon}&start_date={start_date}&end_date={end_date}&timezone=EST&temperature_unit=fahrenheit&daily=weathercode,temperature_2m_mean,rain_sum"
 
@@ -37,4 +37,4 @@ if response.status_code == 200:
         rows.append([date, weathercodeToString(weathercode), avgtemp, precip])
 
 df = pandas.DataFrame(rows, columns=["Date", "Most Severe Weather Code (WMO)", "Avg. Temp (F)", "Total Precip (mm)"])
-df.to_csv("weather_data2.csv", index=True)
+df.to_csv("../chancedata/weather_data.csv", index=False)
