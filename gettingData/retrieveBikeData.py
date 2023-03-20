@@ -2,37 +2,37 @@ import pandas as pd
 import numpy as np
  
 # read in the datasets as CSVs for 2021
-# path = '../chancedata/'
-# df1 = pd.read_csv(path + '202101-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df2 = pd.read_csv(path + '202102-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df3 = pd.read_csv(path + '202103-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df4 = pd.read_csv(path + '202104-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df5 = pd.read_csv(path + '202105-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df6 = pd.read_csv(path + '202106-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df7 = pd.read_csv(path + '202107-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df8 = pd.read_csv(path + '202108-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df9 = pd.read_csv(path + '202109-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df10 = pd.read_csv(path + '202110-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df11 = pd.read_csv(path + '202111-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-# df12 = pd.read_csv(path + '202112-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+path = '../chancedata/'
+df1 = pd.read_csv(path + '202101-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df2 = pd.read_csv(path + '202102-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df3 = pd.read_csv(path + '202103-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df4 = pd.read_csv(path + '202104-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df5 = pd.read_csv(path + '202105-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df6 = pd.read_csv(path + '202106-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df7 = pd.read_csv(path + '202107-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df8 = pd.read_csv(path + '202108-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df9 = pd.read_csv(path + '202109-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df10 = pd.read_csv(path + '202110-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df11 = pd.read_csv(path + '202111-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+df12 = pd.read_csv(path + '202112-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
 
 # read in the datasets as CSVs for 2022
-path = '../chancedata/'
-df1 = pd.read_csv(path + '202201-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df2 = pd.read_csv(path + '202202-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df3 = pd.read_csv(path + '202203-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df4 = pd.read_csv(path + '202204-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df5 = pd.read_csv(path + '202205-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df6 = pd.read_csv(path + '202206-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df7 = pd.read_csv(path + '202207-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df8 = pd.read_csv(path + '202208-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df9 = pd.read_csv(path + '202209-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df10 = pd.read_csv(path + '202210-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df11 = pd.read_csv(path + '202211-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
-df12 = pd.read_csv(path + '202212-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# path = '../chancedata/'
+# df1 = pd.read_csv(path + '202201-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df2 = pd.read_csv(path + '202202-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df3 = pd.read_csv(path + '202203-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df4 = pd.read_csv(path + '202204-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df5 = pd.read_csv(path + '202205-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df6 = pd.read_csv(path + '202206-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df7 = pd.read_csv(path + '202207-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df8 = pd.read_csv(path + '202208-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df9 = pd.read_csv(path + '202209-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df10 = pd.read_csv(path + '202210-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
+# df11 = pd.read_csv(path + '202211-citibike-tripdata.csv', usecols=["started_at","ended_at", "start_lat", "start_lng", "end_lat", "end_lng"])
 
 # create a list of datasets
 objs = [df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12]
+#objs = [df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11]
 
 # haversine formula to calculate distance from latlons
 def haversine(startlat, startlng, endlat, endlng):
@@ -54,16 +54,10 @@ for df in objs:
     df['duration'] = pd.to_datetime(df['ended_at'], format='%Y-%m-%d')-pd.to_datetime(df['started_at'], format='%Y-%m-%d')
     # we get the date by simplifying the started_at time using dt.date 
     df['date'] = pd.to_datetime(df['started_at']).dt.date
-    # # we get the distance (as the crow flies) with the pythagorean theorem
-    # # note that some entries will be 0. you can start and end a ride at the same station.
-    # # please note that this is incorrect and is not in any form of usable distance. However, you can neglect the effect of the
-    # # earth's curvature because manhattan is so small that calculating distance this way is valid
-    # # they just aren't real units. I will call these NYLLs.
-    # df['distance'] = (abs(df["end_lat"] - df["start_lat"])**2 + abs(df["end_lng"] - df["start_lng"])**2)**0.5
     # rewrote to use haversine formula
     df['distance (km)'] = df.apply(lambda x: haversine(x['start_lat'], x['start_lng'], x['end_lat'], x['end_lng']), axis=1)
     # we get rid of the rows we don't need
-    df.drop(['started_at', 'ended_at', 'start_lng', 'start_lat', 'end_lng', 'end_lat'], axis=1, inplace=True)
+    df.drop(['started_at', 'start_lng', 'start_lat', 'end_lng', 'end_lat'], axis=1, inplace=True)
     # progress bar lol
     print("1 dataframe processed. ")
 
@@ -76,12 +70,12 @@ df_merged = pd.concat(
 ).sort_values(by='date')
 
 # I reordered the columns because I am annoying
-df_merged = df_merged[['date', 'duration', 'distance (km)']]
+df_merged = df_merged[['date', 'duration', 'distance (km)', 'ended_at']]
 
 # now... I groupby date and use the .agg function to run mean calculations on each day's duration, distance
 # in this step, I also renamed the columns in the df_average table avg_duration, avg_distance
-df_average = df_merged.groupby('date').agg({'duration': 'mean', 'distance (km)': 'mean'}).rename(columns={'duration': 'avg_duration', 'distance (km)': 'avg_distance (km)'})
+df_average = df_merged.groupby('date').agg({'duration': 'mean', 'distance (km)': 'mean', 'ended_at':'count'}).rename(columns={'duration': 'avgBikeduration', 'distance (km)': 'avgBikeDistance', 'ended_at': 'totalBikeTrips'})
 
-# i wrote the results to a CSV so I didn't need to deal with it
-# df_merged.to_csv("../chancedata/202101bikes.csv", index=False)
-df_average.to_csv("../chancedata/2022bikesavg.csv", index=True)
+# i wrote the results to a CSV
+# df_average.to_csv("../chancedata/2022bikesavg.csv", index=True)
+df_average.to_csv("../chancedata/2021bikesavg.csv", index=True)

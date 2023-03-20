@@ -1,4 +1,4 @@
-Date,Most Severe Weather Code (WMO),Avg. Temp (F),Total Precip (mm)
+date,weatherDescription,avgTemp,totalPrecip
 2021-01-01,Heavy Rain,34.1,6.7
 2021-01-02,Heavy Rain,42.6,3.8
 2021-01-03,Snowing,34.8,7.0
