@@ -11,40 +11,38 @@
 #### Using these three datasets, we generated some initial dataframes to process the data and ended up with three intermediate dataframes.
 
 ##  1. Weather data
-This contained four columns: 
 
-Date (type = string): YYYY-MM-DD
-WeatherCode (type = string): a string representing the most severe weather conditions of the day
-Temp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
-Precipitation (type = float): Sum of daily precipitation in mm
+date (type = string): YYYY-MM-DD
+weatherDescription (type = string): a string representing the most severe weather conditions of the day
+avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
+totalPrecip (type = float): Sum of daily precipitation in mm
 
-## 2. Bike data
-This contained three columns
+##  2. Bike data
 
-Date (type = string): YYYY-MM-DD
-UserAge (type = string): The age of the user
-DurationTrip (type = string): HH-MM-SS (hours, min, sec)
-DistanceTrip (type = float): in latitud
+date (type = string): YYYY-MM-DD
+avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
+avgBikeDistance (type = float): in km
+totalBikeTrips (type = int)
 
 ## 3. Taxi data
-This contained two columns
 
-Date (type = string): YYYY-MM-DD
-DurationTrip (type = string): HH-MM-SS (hours, min, sec)
-DistanceTrip (type = float): 
+date (type = string): YYYY-MM-DD
+avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
+avgTaxiDistance (type = float): in miles
+totalTaxiTrips (type = int)
 
-#### We then combined all of these into one final table by using various joins and count operations.
+#### We then combined all of these into one final table by using join and count operations.
 
 ## FINAL TABLE
 
-This contained 
+date (type = string): YYYY-MM-DD
+weatherDescription (type = string): a string representing the most severe weather conditions of the day
+avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
+totalPrecip (type = float): Sum of daily precipitation in mm
+avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
+avgBikeDistance (type = float): in km
+totalBikeTrips (type = int)
+avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
+avgTaxiDistance (type = float): in miles
+totalTaxiTrips (type = int)
 
-Date (type = string): YYYY-MM-DD
-WeatherCode (type = string): a string representing the most severe weather conditions of the day
-Temp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
-Precipitation (type = float): Sum of daily precipitation in mm
-UserAge (type = string): The age of the user of a bike. 0 if was a taxi ride.
-TaxiTotal (type = int): The total number of trips that started that day.
-BikeTotal (type = int): The total number of trips that started that day.
-TaxiAvgDuration (type = string): HH-MM-SS (hours, min, sec)
-BikeAvgDuration (type = string): HH-MM-SS (hours, min, sec)
