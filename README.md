@@ -14,31 +14,31 @@
 
 date (type = string): YYYY-MM-DD
 
-weatherDescription (type = string): a string representing the most severe weather conditions of the day
+weatherDescription (type = string): a string representing the most severe weather conditions of the day. The categories come from WMO codes.
 
-avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
+avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit in New York City.
 
-totalPrecip (type = float): Sum of daily precipitation in mm
+totalPrecip (type = float): Sum of daily precipitation in New York City in mm
 
 ##  2. Bike data
 
 date (type = string): YYYY-MM-DD
 
-avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
+avgBikeDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a Citibike trip on that day.
 
-avgBikeDistance (type = float): in km
+avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
 
-totalBikeTrips (type = int)
+totalBikeTrips (type = int): the total number of Citibike trips on that day.
 
 ## 3. Taxi data
 
 date (type = string): YYYY-MM-DD
 
-avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
+avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a yellow taxi trip on that day.
 
-avgTaxiDistance (type = float): in miles
+avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
 
-totalTaxiTrips (type = int)
+totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
 
 #### We then combined all of these into one final table by using join and count operations.
 
@@ -46,20 +46,20 @@ totalTaxiTrips (type = int)
 
 date (type = string): YYYY-MM-DD
 
-weatherDescription (type = string): a string representing the most severe weather conditions of the day
+weatherDescription (type = string): a string representing the most severe weather conditions of the day. The categories come from WMO codes.
 
-avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
+avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit in New York City.
 
-totalPrecip (type = float): Sum of daily precipitation in mm
+totalPrecip (type = float): Sum of daily precipitation in New York City in mm
 
-avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
+avgBikeDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a Citibike trip on that day.
 
-avgBikeDistance (type = float): in km
+avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
 
-totalBikeTrips (type = int)
+totalBikeTrips (type = int): the total number of Citibike trips on that day.
 
-avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
+avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a yellow taxi trip on that day.
 
-avgTaxiDistance (type = float): in miles
+avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
 
-totalTaxiTrips (type = int)
+totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
