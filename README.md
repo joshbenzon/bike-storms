@@ -40,7 +40,7 @@ avgTaxiDistance (type = float): in km, the average distance of a yellow taxi tri
 
 totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
 
-#### We then combined all of these into one final table by using join and count operations.
+#### We then combined all of these into one final table, keyed on date.
 
 ## FINAL TABLE
 
