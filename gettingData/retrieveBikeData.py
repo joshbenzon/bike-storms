@@ -74,7 +74,7 @@ df_merged = df_merged[['date', 'duration', 'distance (km)', 'ended_at']]
 
 # now... I groupby date and use the .agg function to run mean calculations on each day's duration, distance
 # in this step, I also renamed the columns in the df_average table avg_duration, avg_distance
-df_average = df_merged.groupby('date').agg({'duration': 'mean', 'distance (km)': 'mean', 'ended_at':'count'}).rename(columns={'duration': 'avgBikeduration', 'distance (km)': 'avgBikeDistance', 'ended_at': 'totalBikeTrips'})
+df_average = df_merged.groupby('date').agg({'duration': 'mean', 'distance (km)': 'mean', 'ended_at':'count'}).rename(columns={'duration': 'avgBikeDuration', 'distance (km)': 'avgBikeDistance', 'ended_at': 'totalBikeTrips'})
 
 # i wrote the results to a CSV
 # df_average.to_csv("../chancedata/2022bikesavg.csv", index=True)
