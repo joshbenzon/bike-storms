@@ -40,7 +40,7 @@ avgTaxiDistance (type = float): in km, the average distance of a yellow taxi tri
 
 totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
 
-#### We then combined all of these into one final table, keyed on date.
+#### We then combined all of these into one final table, keyed on date, changing the durations from timestamps to total seconds.
 
 ## FINAL TABLE
 
@@ -52,13 +52,13 @@ avgTemp (type = float): Mean daily air temperature at 2 meters above ground in F
 
 totalPrecip (type = float): Sum of daily precipitation in New York City in mm
 
-avgBikeDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a Citibike trip on that day.
+avgBikeDuration (type = int): in total seconds the average duration of a Citibike trip on that day.
 
 avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
 
 totalBikeTrips (type = int): the total number of Citibike trips on that day.
 
-avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a yellow taxi trip on that day.
+avgTaxiDuration (type = int): in total seconds the average duration of a yellow taxi trip on that day.
 
 avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
 
