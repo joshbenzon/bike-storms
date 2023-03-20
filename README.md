@@ -13,22 +13,31 @@
 ##  1. Weather data
 
 date (type = string): YYYY-MM-DD
+
 weatherDescription (type = string): a string representing the most severe weather conditions of the day
+
 avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
+
 totalPrecip (type = float): Sum of daily precipitation in mm
 
 ##  2. Bike data
 
 date (type = string): YYYY-MM-DD
+
 avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
+
 avgBikeDistance (type = float): in km
+
 totalBikeTrips (type = int)
 
 ## 3. Taxi data
 
 date (type = string): YYYY-MM-DD
+
 avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
+
 avgTaxiDistance (type = float): in miles
+
 totalTaxiTrips (type = int)
 
 #### We then combined all of these into one final table by using join and count operations.
@@ -36,13 +45,21 @@ totalTaxiTrips (type = int)
 ## FINAL TABLE
 
 date (type = string): YYYY-MM-DD
-weatherDescription (type = string): a string representing the most severe weather conditions of the day
-avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
-totalPrecip (type = float): Sum of daily precipitation in mm
-avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
-avgBikeDistance (type = float): in km
-totalBikeTrips (type = int)
-avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
-avgTaxiDistance (type = float): in miles
-totalTaxiTrips (type = int)
 
+weatherDescription (type = string): a string representing the most severe weather conditions of the day
+
+avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit
+
+totalPrecip (type = float): Sum of daily precipitation in mm
+
+avgBikeDuration (type = string): HH-MM-SS (hours, min, sec)
+
+avgBikeDistance (type = float): in km
+
+totalBikeTrips (type = int)
+
+avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec)
+
+avgTaxiDistance (type = float): in miles
+
+totalTaxiTrips (type = int)
