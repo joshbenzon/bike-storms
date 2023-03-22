@@ -1,5 +1,7 @@
 # Data Deliverable (BikeStorms)
 
+_Data Specs and Tech Reports are in `./data_deliverable/reports`_
+
 ## Datasets:
 
 Taxi (2022) - https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page

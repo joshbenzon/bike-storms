@@ -14,7 +14,7 @@
 
 #### How did you collect your data?
 
--   We created an API call to collect our weather data. Our other two datasets were CSV parquet files.
+-   We web scraped and created an API call to collect our weather data. Our other two datasets were CSV parquet files.
 
 #### Is the source reputable?
 

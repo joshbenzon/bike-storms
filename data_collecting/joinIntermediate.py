@@ -8,7 +8,7 @@ weather = pd.read_csv(path + 'weather_data.csv')
 
 merged = pd.merge(weather, bike, on='date', how='outer').merge(taxi, on='date', how='outer').fillna(0).sort_values(by='date')
 
-#also change timestamps to total seconds
+# also change timestamps to total seconds
 merged['bikeMins'] = merged['avgBikeDuration'].str[10:15].str.split(":").str[0]
 merged['bikeSecs'] = merged['avgBikeDuration'].str[10:15].str.split(":").str[1]
 merged['avgBikeDuration'] = pd.to_numeric(merged['bikeMins']) * 60 + pd.to_numeric(merged['bikeSecs'])

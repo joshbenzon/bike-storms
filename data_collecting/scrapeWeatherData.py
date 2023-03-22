@@ -7,8 +7,7 @@ lon = -74.01
 start_date = "2021-01-01"
 end_date = "2022-11-30"
 
-
-#converts WMO codes to categories. I checked to see which were in the set...
+#converts WMO codes to categories and checked to see which were in the set
 def weathercodeToString(code):
     if (code >= 0 and code <=4):
         return "Clear"

@@ -53,7 +53,7 @@ df10 = pd.read_parquet(path + 'yellow_tripdata_2021-10.parquet', columns=["tpep_
 df11 = pd.read_parquet(path + 'yellow_tripdata_2021-11.parquet', columns=["tpep_pickup_datetime","tpep_dropoff_datetime", "trip_distance"])
 df12 = pd.read_parquet(path + 'yellow_tripdata_2021-12.parquet', columns=["tpep_pickup_datetime","tpep_dropoff_datetime", "trip_distance"])
 
-#filter to clean up data. some of the dates are outside the alleged monthly range.
+# filter to clean up data. some of the dates are outside the alleged monthly range
 df1 = df1.loc[(df1['tpep_pickup_datetime'] >= '2021-01-01')
                      & (df1['tpep_pickup_datetime'] < '2021-02-01')]
 df2 = df2.loc[(df2['tpep_pickup_datetime'] >= '2021-02-01')
@@ -85,15 +85,19 @@ objs = [df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12]
 for df in objs:
     # we get duration by subtracting the ended_at time and started_at time
     df['duration'] = pd.to_datetime(df['tpep_dropoff_datetime'], format='%Y-%m-%d')-pd.to_datetime(df['tpep_pickup_datetime'], format='%Y-%m-%d')
+
     # we get the date by simplifying the started_at time using dt.date 
     df['date'] = pd.to_datetime(df['tpep_pickup_datetime']).dt.date
+
     # we get rid of the rows we don't need
     df.drop(['tpep_pickup_datetime'], axis=1, inplace=True)
+
     # convert this from miles to km
     df['trip_distance'] = df['trip_distance'] * 1.60934
+
     print("1 dataframe processed. ")
 
-# I merged the datasets into one big thing. I sorted them by date.
+# merged the datasets and sorted by date
 df_merged = pd.concat(
     objs,
     axis=0,
@@ -101,11 +105,11 @@ df_merged = pd.concat(
     ignore_index=True,
 ).sort_values(by='date')
 
-# I reordered the columns because I am annoying
+# reordered columns
 df_merged = df_merged[['date', 'duration', 'trip_distance', 'tpep_dropoff_datetime']]
 
-# now... I groupby date and use the .agg function to run mean calculations on each day's duration, distance
-# in this step, I also renamed the columns in the df_average table avg_duration, avg_distance
+# groupby date and use the .agg function to run mean calculations on each day's duration and distances
+# renamed the columns in the df_average table avg_duration, avg_distance
 df_average = df_merged.groupby('date').agg({'duration': 'mean', 'trip_distance': 'mean', 'tpep_dropoff_datetime': 'count'}).rename(columns={'duration': 'avgTaxiDuration', 'trip_distance': 'avgTaxiDistance', 'tpep_dropoff_datetime' : 'totalTaxiTrips'})
 
 #df_average.to_csv("../chancedata/2022TAXISavg.csv", index=True)
