@@ -1,65 +1,65 @@
-# Data Deliverable
+# Data Deliverable (BikeStorms)
 
-#### Three datasets are being used.
+## Datasets:
 
-2022 taxi ride data - https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+Taxi (2022) - https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-2022 bike data - https://s3.amazonaws.com/tripdata/index.html
+Bike (2022) - https://s3.amazonaws.com/tripdata/index.html
 
-2022 weather data - an API call to https://archive-api.open-meteo.com
+Weather (2022) - API Call - https://archive-api.open-meteo.com
 
-#### Using these three datasets, we generated some initial dataframes to process the data and ended up with three intermediate dataframes.
+Using these three datasets, we generated some initial data frames to process the data and ended up with three intermediate data frames.
 
-##  1. Weather data
+## Weather Data:
 
-date (type = string): YYYY-MM-DD
+1. date (type = string): YYYY-MM-DD
 
-weatherDescription (type = string): a string representing the most severe weather conditions of the day. The categories come from WMO codes.
+2. weatherDescription (type = string): a string representing the most severe weather conditions of the day. The categories come from WMO codes.
 
-avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit in New York City.
+3. avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit in New York City.
 
-totalPrecip (type = float): Sum of daily precipitation in New York City in mm
+4. totalPrecip (type = float): Sum of daily precipitation in New York City in mm
 
-##  2. Bike data
+## Bike Data:
 
-date (type = string): YYYY-MM-DD
+5. date (type = string): YYYY-MM-DD
 
-avgBikeDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a Citibike trip on that day.
+6. avgBikeDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a Citibike trip on that day.
 
-avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
+7. avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
 
-totalBikeTrips (type = int): the total number of Citibike trips on that day.
+8. totalBikeTrips (type = int): the total number of Citibike trips on that day.
 
-## 3. Taxi data
+## Taxi Data:
 
-date (type = string): YYYY-MM-DD
+9. date (type = string): YYYY-MM-DD
 
-avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a yellow taxi trip on that day.
+10. avgTaxiDuration (type = string): HH-MM-SS (hours, min, sec) the average duration of a yellow taxi trip on that day.
 
-avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
+11. avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
 
-totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
+12. totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
 
-#### We then combined all of these into one final table, keyed on date, changing the durations from timestamps to total seconds.
+We then combined all of these into one final table, keyed on date, and changed the durations from timestamps to total seconds.
 
-## FINAL TABLE
+## Final Data:
 
-date (type = string): YYYY-MM-DD
+1. date (type = string): YYYY-MM-DD
 
-weatherDescription (type = string): a string representing the most severe weather conditions of the day. The categories come from WMO codes.
+2. weatherDescription (type = string): a string representing the most severe weather conditions of the day. The categories come from WMO codes.
 
-avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit in New York City.
+3. avgTemp (type = float): Mean daily air temperature at 2 meters above ground in Farenheit in New York City.
 
-totalPrecip (type = float): Sum of daily precipitation in New York City in mm
+4. totalPrecip (type = float): Sum of daily precipitation in New York City in mm
 
-avgBikeDuration (type = int): in total seconds the average duration of a Citibike trip on that day.
+5. avgBikeDuration (type = int): in total seconds the average duration of a Citibike trip on that day.
 
-avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
+6. avgBikeDistance (type = float): in km, the average distance of a Citibike trip on that day.
 
-totalBikeTrips (type = int): the total number of Citibike trips on that day.
+7. totalBikeTrips (type = int): the total number of Citibike trips on that day.
 
-avgTaxiDuration (type = int): in total seconds the average duration of a yellow taxi trip on that day.
+8. avgTaxiDuration (type = int): in total seconds the average duration of a yellow taxi trip on that day.
 
-avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
+9. avgTaxiDistance (type = float): in km, the average distance of a yellow taxi trip on that day.
 
-totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
+10. totalTaxiTrips (type = int): the total number of yellow taxi trips on that day.
