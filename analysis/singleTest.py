@@ -1,16 +1,20 @@
-import pandas as pd
 from scipy.stats import ttest_ind
+from statistics import mean
 
-# Hypothesis #1: If the weather description shows "heavy rain" (and maybe "light rain"), the average bike ride distance will decrease.
+import pandas as pd
 
-# Load the data into a Pandas DataFrame
+# load all the data
 allData = pd.read_csv("../data/final_data.csv")
-print(allData, "ALL\n")
+# print(allData, "ALL DATA\n")
 
-# Split the data into two groups based on weather description
+# Hypothesis #1: If the weather description shows "heavy rain", the average bike ride distance will decrease.
+print("Hypothesis #1\n")
+
+# split the data into two groups based on weather description and bike distance
 weatherData = allData["weatherDescription"]
 distanceData = allData["avgBikeDistance"]
-print(weatherData, "WEATHER DATA\n")
+# print(weatherData, "WEATHER DATA\n")
+# print(distanceData, "DISTANCE DATA\n")
 
 rainData = []
 noRainData = []
@@ -21,14 +25,44 @@ for index, description in enumerate(weatherData):
     else:
         noRainData.append(distanceData[index])
 
-print(rainData, "RAIN DATA\n")
-print(noRainData, "NO RAIN DATA\n")
+# print(rainData, "RAIN DATA\n")
+# print(noRainData, "NO RAIN DATA\n")
 
-# Perform the t-test
-t_stat, p_value = ttest_ind(rainData, noRainData)
+# perform the one-sided t-test
+tStat, pValue = ttest_ind(rainData, noRainData)
 
-# Print the results
-print('T-Stat:', t_stat)
-print('P-Value:', p_value)
+print("Average of Distance with Rain: ", mean(rainData))
+print("Average of Distance with No Rain: ", mean(noRainData))
+print("T-Stat: ", tStat)
+print("P-Value: ", pValue)
+# Decreased!
 
-# Hypothesis #2: If the weather description shows "clear", the average taxi ride duration (time) will increase.
+# Hypothesis #2: If the weather description shows "clear", the average taxi ride duration will increase.
+print("Hypothesis #2\n")
+
+# split the data into two groups based on weather description and taxi duration
+weatherData = allData["weatherDescription"]
+durationData = allData["avgTaxiDuration"]
+# print(weatherData, "WEATHER DATA\n")
+# print(durationData, "DURATION DATA\n")
+
+clearData = []
+noClearData = []
+
+for index, description in enumerate(weatherData):
+    if description == "Clear":
+        clearData.append(durationData[index])
+    else:
+        noClearData.append(durationData[index])
+
+# print(clearData, "CLEAR DATA\n")
+# print(noClearData, "NO CLEAR DATA\n")
+
+# perform the one-sided t-test
+tStat, pValue = ttest_ind(clearData, noClearData)
+
+print("Average of Duration with Clear: ", mean(clearData))
+print("Average of Duration with No Clear: ", mean(noClearData))
+print('T-Stat:', tStat)
+print('P-Value:', pValue)
+# Increased!
