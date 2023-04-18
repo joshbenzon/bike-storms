@@ -31,7 +31,9 @@ for index, description in enumerate(weatherData):
 # perform the one-sided t-test
 tStat, pValue = ttest_ind(rainData, noRainData)
 
+print("Data Length of Distance with Rain: ", len(rainData))
 print("Average of Distance with Rain: ", mean(rainData))
+print("Data Length of Distance with No Rain: ", len(noRainData))
 print("Average of Distance with No Rain: ", mean(noRainData))
 print("T-Stat: ", tStat)
 print("P-Value: ", pValue)
@@ -61,7 +63,9 @@ for index, description in enumerate(weatherData):
 # perform the one-sided t-test
 tStat, pValue = ttest_ind(clearData, noClearData)
 
+print("Data Length of Duration with Clear: ", len(clearData))
 print("Average of Duration with Clear: ", mean(clearData))
+print("Data Length of Duration with No Clear: ", len(noClearData))
 print("Average of Duration with No Clear: ", mean(noClearData))
 print('T-Stat:', tStat)
 print('P-Value:', pValue)
