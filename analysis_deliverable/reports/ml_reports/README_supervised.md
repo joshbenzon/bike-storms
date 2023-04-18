@@ -1,6 +1,6 @@
-# Hypothesis (Double) Report (BikeStorms)
+# Hypothesis (Supervised) Report (BikeStorms)
 
-## Hypothesis #3:
+## Model #1:
 
 ### Results
 
