@@ -4,7 +4,7 @@ from statistics import mean
 import pandas as pd
 
 # load all the data
-allData = pd.read_csv("../data/final_data.csv")
+allData = pd.read_csv("data/final_data.csv")
 # print(allData, "ALL DATA\n")
 
 # Hypothesis #1: If the weather description shows "heavy rain", the average bike ride distance will decrease.
