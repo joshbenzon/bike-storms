@@ -1,4 +1,4 @@
-# Hypothesis (Unsupervised) Report (BikeStorms)
+# Machine Learning (Classification) Report (BikeStorms)
 
 ## Model #2:
 
