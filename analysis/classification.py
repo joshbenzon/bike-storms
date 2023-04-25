@@ -9,11 +9,12 @@ from warnings import simplefilter
 simplefilter(action='ignore', category=FutureWarning)
 
 
-# K-Nearest Neighbor: Given average bike ride time and distance, classify it into a weatherDescription
+# K-Nearest Neighbor: 
+# Given average bike ride time, distance, and bike trips on a given day, predict the weatherDescription
 # load all the data & then grab only necessary columns
 allData = pd.read_csv("../data/final_data.csv")
-allData.dropna(subset=['avgBikeDuration'], inplace=True)
-x = allData[['avgBikeDuration', 'avgBikeDistance']]
+allData.dropna(subset=['avgBikeDuration'], inplace=True) # Missed a NaN value during our data cleaning
+x = allData[['avgBikeDuration', 'avgBikeDistance', 'totalBikeTrips']]
 y = allData['weatherDescription']
 
 # perform one-hot encoding on categorical labels 
@@ -25,8 +26,8 @@ scaler = MinMaxScaler()
 norm = scaler.fit_transform(x)
 x = pd.DataFrame(norm, columns=x.columns)
 
-x_train, x_val_test, y_train, y_val_test = train_test_split(x, y, test_size = 0.4, random_state = 1)
-x_val, x_test, y_val, y_test = train_test_split(x_val_test, y_val_test, test_size= 0.5, random_state=1) 
+x_train, x_val_test, y_train, y_val_test = train_test_split(x, y, test_size= 0.4, random_state= 1)
+x_val, x_test, y_val, y_test = train_test_split(x_val_test, y_val_test, test_size= 0.5, random_state= 1) 
 
 # Finding the ideal K
 k_vals = range(1,11)
@@ -46,7 +47,7 @@ plt.xlabel("Number of neighbors (k)")
 plt.legend(['Training','Validation'])
 plt.show()
 
-k = 6
+k = 7
 # train model
 classifier = KNeighborsClassifier(k).fit(x_train, y_train)
 # predict test set
