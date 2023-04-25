@@ -17,7 +17,7 @@ outlier_index = dataset[dataset['avgBikeDuration'] == 17.0].index
 dataset.drop(outlier_index, inplace=True)
 
 
-lst = [('avgTemp', 'avgBikeDuration'), ('avgTemp', 'avgTaxiDuration'), ('totalPrecip', 'totalTaxiTrips'), ('totalPrecip', 'totalBikeTrips')]
+lst = [('avgTemp', 'avgTaxiDuration')]
 for (xstr, ystr) in lst:
     X = dataset[xstr]
     y = dataset[ystr]
