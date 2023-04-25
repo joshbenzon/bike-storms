@@ -8,7 +8,9 @@
 
 ### Why did you use this statistical test or ML algorithm? Which other tests did you consider or evaluate? What metric(s) did you use to measure success or failure, and why did you use it? What challenges did you face evaluating the model? Did you have to clean or restructure your data?
 
--   TODO
+-  I wanted to predict the weather on a given day in New York City from the average duration, distance, and number of CitiBike trips on that day. Since this is a classification task involving categorical labels, I knew that using a supervised machine learning algorithm would be suitable for this task. I decided to implement K-Nearest Neighbors; however, other supervised learning techiques could have worked such as suport vector machines or decision trees.
+-  After finding the optimal K value of 7, I used the training set accuracy and testing set accuracy to measure the success of my analysis. 
+-  From our final cleaned data set, I took the columns 'avgBikeDuration', 'avgBikeDistance', and 'totalBikeTrips' for to be the independent 
 
 ### What is your interpretation of the results? Do you accept or deny the hypothesis, or are you satisfied with your prediction accuracy? For prediction projects, we expect you to argue why you got the accuracy/success metric you have. Intuitively, how do you react to the results? Are you confident in the results?
 
