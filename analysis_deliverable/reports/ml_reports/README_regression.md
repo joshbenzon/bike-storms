@@ -1,4 +1,4 @@
-# Hypothesis (Regression) Report (BikeStorms)
+# Machine Learning (Regression) Report (BikeStorms)
 
 ## Model #1:
 
