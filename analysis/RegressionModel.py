@@ -1,7 +1,8 @@
-import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -11,13 +12,15 @@ dataset = pd.read_csv('../data/final_data.csv')
 #clean data - we missed a NaN in our avgBikeDuration...
 #print(dataset.isna().sum())
 dataset.dropna(subset=['avgBikeDuration'], inplace=True)
+
 # i also had a 17 avg bike durations which was a huge outlier and an error in collection or a day when citibikes were off
 # so i remove it
+
 outlier_index = dataset[dataset['avgBikeDuration'] == 17.0].index
 dataset.drop(outlier_index, inplace=True)
 
-
 lst = [('avgTemp', 'avgTaxiDuration')]
+
 for (xstr, ystr) in lst:
     X = dataset[xstr]
     y = dataset[ystr]
@@ -25,7 +28,6 @@ for (xstr, ystr) in lst:
     # I decided not to scale it because I wanted it to display the correct values on the graph
     # scaler = StandardScaler()
     # X = scaler.fit_transform(X.values.reshape(-1, 1))
-
 
     # Use train_test_split to split the data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0) 
@@ -36,8 +38,6 @@ for (xstr, ystr) in lst:
     # # Convert to df 
     X_train = X_train.to_frame()
     X_test = X_test.to_frame()
-
-
 
     reg = LinearRegression().fit(X_train, y_train) 
 

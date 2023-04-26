@@ -4,19 +4,19 @@
 
 ### Results
 
--  Bike rides decreased "significantly", taxi rides did not decrease "significantly"
+-   Bike rides decreased "significantly", taxi rides did not decrease "significantly"
 
 Bike rides in heavy rain vs. non-heavy rain:
-t-statistic:  -3.404155276683802
-p-value:  0.0007016901668847413
-Mean bike rides in heavy rain:  72337.26119402985
-Mean bike rides in non-heavy rain:  83200.93274336284
+t-statistic: -3.404155276683802
+p-value: 0.0007016901668847413
+Mean bike rides in heavy rain: 72337.26119402985
+Mean bike rides in non-heavy rain: 83200.93274336284
 
 Taxi rides in heavy rain vs. non-heavy rain:
-t-statistic:  -0.13461250781619294
-p-value:  0.8929571131834464
-Mean taxi rides in heavy rain:  95811
-Mean taxi rides in non-heavy rain:  96140
+t-statistic: -0.13461250781619294
+p-value: 0.8929571131834464
+Mean taxi rides in heavy rain: 95811
+Mean taxi rides in non-heavy rain: 96140
 
 ### Why did you use this statistical test or ML algorithm? Which other tests did you consider or evaluate? What metric(s) did you use to measure success or failure, and why did you use it? What challenges did you face evaluating the model? Did you have to clean or restructure your data?
 
@@ -45,7 +45,3 @@ Upon retrospection, this makes sense. People are potentially taking less bike ri
 ### Was the data adequate for your analysis? If not, what aspects of the data were problematic and how could you have remedied that?
 
 -   The data used in this analysis seems adequate for the purpose of testing the hypothesis. However, it's important to note that the data only covers a certain time period and location, so the results may not be generalizable to other locations or time periods. Additionally, there could be other factors affecting the number of bike and taxi rides that were not accounted for in this analysis, such as the availability of public transportation, outside temperature, or spikes in tourism. To remedy these issues, we could consider collecting data from multiple locations and time periods or incorporating additional variables into the analysis to better understand the factors affecting bike and taxi ride numbers during rainy weather.
-
-
-
-

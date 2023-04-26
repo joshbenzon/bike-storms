@@ -1,13 +1,14 @@
-import pandas as pd
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
-import matplotlib.pyplot as plt
 from warnings import simplefilter
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
 # ignore all future warnings
 simplefilter(action='ignore', category=FutureWarning)
-
 
 # K-Nearest Neighbor: 
 # Given average bike ride time, distance, and bike trips on a given day, predict the weatherDescription
@@ -48,12 +49,14 @@ plt.legend(['Training','Validation'])
 plt.show()
 
 k = 7
+
 # train model
 classifier = KNeighborsClassifier(k).fit(x_train, y_train)
+
 # predict test set
 y_hat = classifier.predict(x_test)
+
 train_accuracy = metrics.accuracy_score(y_train, classifier.predict(x_train))
 test_accuracy = metrics.accuracy_score(y_test, y_hat)
 print("Train set Accuracy: ", train_accuracy)
 print("Test set Accuracy: ", test_accuracy)
-

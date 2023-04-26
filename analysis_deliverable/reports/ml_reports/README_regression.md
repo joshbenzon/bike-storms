@@ -9,8 +9,7 @@
 ### Why did you use this statistical test or ML algorithm? Which other tests did you consider or evaluate? What metric(s) did you use to measure success or failure, and why did you use it? What challenges did you face evaluating the model? Did you have to clean or restructure your data?
 
 -   I theorized that higher temperatures in the summertime would lead to people taking longer taxi rides. However, I thought colder temperatures would lead to people taking longer taxi rides. Thus, I originally intended on doing some kind of polynomial fit. I was surprised that in an initial visualization where I just plotted the data as a scatterplot, the data appeared to be fairly linear. The best model for this thus turned out to be a linear regression ML model. It yielded a testing R^2 value of .18 and a training R^2 value of .20. I feel like these are pretty good results.
-I did not need to clean or restructure the data beyond just extracting the two columns I wanted to compare.
-
+    I did not need to clean or restructure the data beyond just extracting the two columns I wanted to compare.
 
 ### What is your interpretation of the results? Do you accept or deny the hypothesis, or are you satisfied with your prediction accuracy? For prediction projects, we expect you to argue why you got the accuracy/success metric you have. Intuitively, how do you react to the results? Are you confident in the results?
 
