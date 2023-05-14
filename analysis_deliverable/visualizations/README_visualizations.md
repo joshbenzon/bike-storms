@@ -1,7 +1,7 @@
 # Scatter Plot 
 
 ## Why did you pick this representation? 
-- I chose this representation because I broadly wanted to show the relationship between two (three, if you count taxi and bike duration separately) continuous numerical variables. I wanted the viewer to get a sense of the data, the concentration, major outliers, etc. 
+- I chose this representation because I broadly wanted to show the relationship between two (three, if you count taxi and bike duration separately) continuous numerical variables. I wanted the viewer to get a sense of the data, the concentration, major outliers, etc. This also shows the result from our ML analysis of the data which was that there is a slight positive correlation between bike trip duration and temperature.
 
 ## What alternative ways might you communicate the result? 
 - Instead of showing the diagram, we could just write out that there was a slight positive correlation between trip duration and temperature.
