@@ -1,6 +1,6 @@
 # Data Deliverable (BikeStorms)
 
-_Data Specs and Tech Reports are in `./data_deliverable/reports`_
+_Final Presentation: `https://drive.google.com/file/d/1qlHKMntIszWzXYv3X3wby7iNvOSY9bIR/view?usp=share_link`_
 
 ## Datasets:
 
